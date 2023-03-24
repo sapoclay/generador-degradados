@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+body {
+  padding: 0 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to top, #8000ff, #5a00a1);
+}
+
+/*Envoltorio*/
+.wrapper {
+  width: 450px;
+  padding: 25px;
+  background: #e3e3e3;
+  border-radius: 10px;
+  box-shadow: 15px 35px 50px rgba(0,0,0,0.9);
+  border: 11px solid #f00;
+}
+.wrapper .gradient-box {
+  height: 220px;
+  width: 100%;
+  border-radius: 7px;
+  background: linear-gradient(to left top, #33d17a, #c01c28);
+  border:1px solid #000000;
+}
+.wrapper .row {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+/*Opciones*/
+.options p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.row :where(.column, button) {
+  width: calc(100% / 2 - 12px);
+}
+.options .select-box {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #000000;
+}
+.select-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.12rem;
+  background: none;
+}
+.options .palette {
+  margin-left: 60px;
+}
+.palette input {
+  height: 41px;
+  width: calc(100% / 2 - 20px);
+}
+.palette input:last-child {
+  margin-left: 6px;
+}
+
+/*Degradado generado*/
+.wrapper textarea {
+  width: 100%;
+  color: #333;
+  font-size: 1.05rem;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+/*Botones*/
+.buttons button {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 0 0 -15px;
+  font-size: 1.09rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #000;
+}
+.buttons .refresh {
+  background: #ff0800;
+}
+.buttons .refresh:hover {
+  background: #7e0000;
+}
+.buttons .copy {
+  background: #5838d8;
+}
+.buttons .copy:hover {
+  background: #2800c7;
+}
+
+/*Título*/
+.titulo {
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  font: normal 38px / normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  white-space: pre;
+  text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0),
+    0 0 30px rgba(255, 0, 0), 0 0 40px #727272, 0 0 70px #727272,
+    0 0 80px #4e4e4e, 0 0 100px #2b2b2b;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  width: 100%;
+  margin-top: 10px;
+}
+.titulo:hover {
+  text-shadow: 0 0 10px rgb(69, 0, 109), 0 0 20px rgb(73, 0, 95),
+    0 0 30px rgb(57, 0, 68), 0 0 40px #580054, 0 0 70px #000000,
+    0 0 80px #000000, 0 0 100px #000000;
+}
+
+/*Pantallas pequeñas*/
+@media screen and (max-width: 474px) {
+  .wrapper {
+    padding: 20px 20px;
+    width: 300px;
+  }
+  .row :where(.column, button) {
+    width: calc(100% / 2 - 8px);
+  }
+  .options .select-box {
+    padding: 8px 15px;
+  }
+  .options .palette  {
+    margin-left: 40px;
+  }
+  .options .colors {
+    display: flex;
+    justify-content: space-between;
+  }
+  .palette input {
+    width: calc(100% / 2 - 5px);
+  }
+  .palette input:last-child {
+    margin-left: 0;
+  }
+  .titulo{
+    font: normal 25px / normal "Warnes", Helvetica, sans-serif;
+  }
+}
