@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de degradados en JavaScript</title>
+    <link rel="icon" type="image/jpg" href="./Img/favicon.ico" />
+    <link rel="stylesheet" href="./assets/style.css">   
+  </head>
+  <body>
+    <div class="titulo" title="made in entreunosyceros.net">Generador de degradados</div>
+    <div class="wrapper">
+      <!-- Vista previa del degradado seleccionado -->
+      <label for="gradient-box">Vista previa</label>
+      <div class="gradient-box"></div>
+      <div class="row options">
+        <!-- Opciones de degradado -->
+        <div class="column direction">
+          <label for="select-box">Opciones</label>
+          <div class="select-box">
+            <select>
+              <option value="to top" selected>Arriba</option>
+              <option value="to right top">Derecha arriba</option>
+              <option value="to right">Derecha</option>
+              <option value="to right bottom">Derecha abajo</option>
+              <option value="to bottom">Abajo</option>
+              <option value="to left bottom">Izquierda abajo</option>
+              <option value="to left">Izquierda</option>
+              <option value="to left top">Izquierda arriba</option>
+            </select>
+          </div>
+        </div>
+        <div class="column palette">
+          <!-- Paleta de colores -->
+          <label for="colors">Colores</label>
+          <div class="colors">
+            <input type="color" value="#33d17a">
+            <input type="color" value="#c01c28">
+          </div>
+        </div>
+      </div>
+      <!-- Código degradado generado -->
+      <label for="row">Degradado generado</label>
+      <textarea class="row" disabled>background-image: linear-gradient(to left top, #977DFE,  #6878FF);</textarea>
+      <!-- Botones de acción -->
+      <label for="row buttons">Opciones</label>
+      <div class="row buttons">
+        <button class="refresh" title="Colores aleatorios">Colores aleatorios</button>
+        <button class="copy" title="Copiar código">Copiar código</button>
+      </div>
+    </div>
+    <script src="./assets/script.js" defer></script>    
+  </body>
+</html>
